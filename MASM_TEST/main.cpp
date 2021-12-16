@@ -3,15 +3,15 @@
 
 using namespace std;
 
-// syntax: extern "C" [type] __stdcall [function(type1, type2)];
 extern "C" {
-     bool isodd(int);
+     // declare assembly functions here to use
+     // syntax: extern "C" [type] __stdcall [function(type1, type2)];
+     bool __stdcall test1();
 }
 
 int main() {
      // use your function here
-
-     string flag = isodd(3) ? "TRUE" : "FALSE";
+     string flag = test1() ? "TRUE" : "FALSE";
      cout << flag << endl;
 
      return 0;

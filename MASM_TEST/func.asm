@@ -1,12 +1,10 @@
-; Function template to use in .cpp
-; change 'func' to your function name
+; test function to be called in testA.asm
 
-.386
-.MODEL FLAT, C				; the "C" arg passed here is required for functions to be recognized at linking stage
+INCLUDE func.inc
 
 .code
 
-isodd PROC  aIn:DWORD
+isodd PROC,  aIn:DWORD
 	
 	mov eax, aIn
 	and eax, 1
