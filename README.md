@@ -6,7 +6,7 @@ Program to test assembly projects in c++
  - Call .asm function from another .asm file
 
 **Working On**
- - Figuring out what to do next
+ - Include google test
 
 **Future**
 
