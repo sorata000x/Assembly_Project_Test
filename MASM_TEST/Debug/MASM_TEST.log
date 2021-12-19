@@ -1,3 +1,1 @@
-﻿  Assembling testA.asm...
-testA.asm(4): warning A4011: multiple .MODEL directives found : .MODEL ignored
-  MASM_TEST.vcxproj -> D:\Development\Assembly_Project_Test\MASM_TEST\Debug\MASM_TEST.exe
+﻿  MASM_TEST.vcxproj -> D:\Development\Assembly_Project_Test\MASM_TEST\Debug\MASM_TEST.exe

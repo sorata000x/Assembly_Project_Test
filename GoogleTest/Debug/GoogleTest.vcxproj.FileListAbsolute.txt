@@ -1,0 +1,2 @@
+D:\Development\Assembly_Project_Test3\GoogleTest\Debug\GoogleTest.lib
+D:\Development\Assembly_Project_Test\GoogleTest\Debug\GoogleTest.lib
