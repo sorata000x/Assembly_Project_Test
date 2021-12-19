@@ -25,13 +25,18 @@ How to add reference:
 
 # Progress
 
+**Update**
+ - Test for Chapter 5 5.BetterRandomRange
+
+**Issue**
+
+**Working On**
+ - Test the program with textbook projects
+    - Write test for Chaper 5
+
+**Future**
+
 **Implemented**
  - Google Test
  - Call .asm function from another .asm file
  - Call a .asm (with original Irvine32.inc) function from .cpp
-
-**Working On**
-
-**Future**
-
-**Issue**
