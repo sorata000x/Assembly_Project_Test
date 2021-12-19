@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -149,14 +149,16 @@
     <ClCompile Include="ctestA.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <MASM Include="chapter5.asm" />
     <MASM Include="func.asm" />
     <MASM Include="testA.asm" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="chapter5.inc" />
     <None Include="func.inc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GoogleTest\GoogleTest.vcxproj">
+    <ProjectReference Include="..\..\Assembly_Project_Test\GoogleTest\GoogleTest.vcxproj">
       <Project>{0c344f0c-072d-47fc-8e90-86cee4737e22}</Project>
     </ProjectReference>
   </ItemGroup>

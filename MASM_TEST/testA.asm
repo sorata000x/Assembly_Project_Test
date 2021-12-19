@@ -1,17 +1,16 @@
-INCLUDE func.inc
+INCLUDE chapter5.inc
 
 .386
 .MODEL FLAT, stdcall				
-PUBLIC test1
+PUBLIC a_test_BetterRandomRange
 
 .code
 
-test1 PROC
-	
-	mov eax, 3
-	INVOKE isodd, eax
+a_test_BetterRandomRange PROC, lower:DWORD, upper:DWORD 
+
+	INVOKE BetterRandomRange, lower, upper
 
 	ret
-test1 ENDP
+a_test_BetterRandomRange ENDP
 
 END

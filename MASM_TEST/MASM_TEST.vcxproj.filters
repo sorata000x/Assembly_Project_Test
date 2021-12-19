@@ -5,9 +5,27 @@
   </ItemGroup>
   <ItemGroup>
     <MASM Include="testA.asm" />
-    <MASM Include="func.asm" />
+    <MASM Include="func.asm">
+      <Filter>func</Filter>
+    </MASM>
+    <MASM Include="chapter5.asm">
+      <Filter>chapter5</Filter>
+    </MASM>
   </ItemGroup>
   <ItemGroup>
-    <None Include="func.inc" />
+    <None Include="func.inc">
+      <Filter>func</Filter>
+    </None>
+    <None Include="chapter5.inc">
+      <Filter>chapter5</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="func">
+      <UniqueIdentifier>{8ff76e01-8983-4d70-9b9a-f210c4950594}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="chapter5">
+      <UniqueIdentifier>{51f07c8b-1234-4030-8c87-d9c6c1509feb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
