@@ -26,7 +26,7 @@ How to add reference:
 # Progress
 
 **Update**
- - Test for Chapter 5 Exercise 6.RandomString
+ - Added test for Chapter 5 Exercise 6.RandomString
 
 **Issue**
 
