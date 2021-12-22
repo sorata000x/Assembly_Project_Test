@@ -13,4 +13,11 @@ a_test_BetterRandomRange PROC, lower:DWORD, upper:DWORD
 	ret
 a_test_BetterRandomRange ENDP
 
+a_test_RandomString PROC, _size:DWORD, _str:DWORD
+
+	INVOKE RandomString, _size, _str
+
+	ret
+a_test_RandomString ENDP
+
 END
