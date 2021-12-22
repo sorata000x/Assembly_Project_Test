@@ -20,4 +20,11 @@ a_test_RandomString PROC, _size:DWORD, _str:DWORD
 	ret
 a_test_RandomString ENDP
 
+a_test_FiboGenerator PROC, num:DWORD, arr:DWORD
+
+	INVOKE FiboGenerator, num, arr
+
+	ret
+a_test_FiboGenerator ENDP
+
 END
