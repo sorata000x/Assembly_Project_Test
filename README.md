@@ -27,13 +27,13 @@ How to add reference:
 # Progress
 
 **Update**
- - Added test for Chapter 5 Exercise 10.Fibonacci Generator
+ - Added test for Chapter 5 Exercise 11.Finding Multiples of K
 
 **Issue**
 
 **Working On**
  - Test the program with textbook projects
-    - Write test for Chaper 5
+    - Write test for Chapter 5
 
 **Future**
 
@@ -42,6 +42,7 @@ How to add reference:
     - Exercise 5.BetterRandomRange
     - Exercise 6.RandomString
     - Exercise 10.FiboGenerator
+    - Exercise 11.FindMultiple
  - Google Test
  - Call .asm function from another .asm file
  - Call a .asm (with original Irvine32.inc) function from .cpp
