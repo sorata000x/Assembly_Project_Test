@@ -9,8 +9,9 @@ extern "C" {
      // declare assembly functions here to use
      // syntax: extern "C" [type] __stdcall [function(type1, type2)];
      int __stdcall a_test_BetterRandomRange(int, int);
-     char* _stdcall a_test_RandomString(int, char*);
-     int* _stdcall a_test_FiboGenerator(int, int*);
+     void _stdcall a_test_RandomString(int, char*);
+     void _stdcall a_test_FiboGenerator(int, int*);
+     void _stdcall a_test_FindMultiple(int, int, int*);
 }
 
 // =============== Chapter 5 ===================
@@ -96,6 +97,41 @@ bool c_test_FiboGenerator(bool debug = false) {
      return true;
 }
 
+// Exercise 11
+bool c_test_FindMultiple(bool debug = false) {
+
+     const int K = 3;
+     const int N = 50;
+     int arr[N];
+     // initialize arr with 0
+     for (int i = 0; i < N; i++) {
+          arr[i] = 0;
+     }
+     a_test_FindMultiple(K, N, arr);
+     if (debug) {
+          for (int i = 0; i < N; i++) {
+               cout << arr[i];
+               if (i != N - 1) { cout << ", "; }
+          }
+          cout << endl;
+          // verify
+          int exp = -1;                      // expect 1 or 0
+          for (int i = 0; i < N; i++) {
+               if (i % K == K-1) { exp = 1; }
+               else { exp = 0; }
+               if (arr[i] != exp)
+               {
+                    cout << "FAILED: Expect arr[" << i << "] to be " << exp << " but received " << arr[i] << "instead." << endl;
+               }
+          }
+               
+               
+     }
+
+     return true;
+}
+
+
 TEST(TEST_CHAPTER5, TestBetterRandomRange) {
 
      //EXPECT_EQ(0, <your individual test functions are called here>);
@@ -116,6 +152,15 @@ TEST(TEST_CHAPTER5, TestFiboGenerator) {
 
      EXPECT_EQ(1, c_test_FiboGenerator(false));
 }
+
+TEST(TEST_CHAPTER5, TestFindMultiple) {
+
+     //EXPECT_EQ(0, <your individual test functions are called here>);
+
+     EXPECT_EQ(1, c_test_FindMultiple(false));
+}
+
+
 
 int main(int argc, char** argv) {
      ::testing::InitGoogleTest(&argc, argv);

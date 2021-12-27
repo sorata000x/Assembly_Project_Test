@@ -27,4 +27,11 @@ a_test_FiboGenerator PROC, num:DWORD, arr:DWORD
 	ret
 a_test_FiboGenerator ENDP
 
+a_test_FindMultiple PROC, K:DWORD, N:DWORD, arr:DWORD
+
+	INVOKE FindMultiple, K, N, arr
+
+	ret
+a_test_FindMultiple ENDP
+
 END
