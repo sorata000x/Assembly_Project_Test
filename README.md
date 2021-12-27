@@ -36,6 +36,7 @@ How to add reference:
     - Write test for Chapter 5
 
 **Future**
+ - Most of the exercises are not able to test with output, so my thought of alternative solution is to test if the program file contains certain code string. 
 
 **Implemented**
  - Chapter 5 exercise test
