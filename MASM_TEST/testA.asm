@@ -1,37 +1,59 @@
-INCLUDE chapter5.inc
+INCLUDE Irvine32.inc
 
 .386
 .MODEL FLAT, stdcall				
-PUBLIC a_test_BetterRandomRange
 
 .code
 
-a_test_BetterRandomRange PROC, lower:DWORD, upper:DWORD 
-
-	INVOKE BetterRandomRange, lower, upper
+stub PROC
 
 	ret
-a_test_BetterRandomRange ENDP
+stub ENDP
 
-a_test_RandomString PROC, _size:DWORD, _str:DWORD
+; --------------------------------
+; IntCalc
+; 
+; Description:
+;   performe integer calculation A = (A + B) - (C + D)
+; 
+; Receive:
+;   EAX = A, EBX = B, ECX = C, EDX = D
+; 
+; Return: 
+;   EAX = (A + B) - (C + D)
+; ---------------------------------
+IntCalc PROC
 
-	INVOKE RandomString, _size, _str
+	add eax, ebx	; A = A + B
+	add ecx, edx   ; C = C + D
+	sub eax, ecx	; A = (A + B) - (C + D)
 
 	ret
-a_test_RandomString ENDP
+IntCalc ENDP
 
-a_test_FiboGenerator PROC, num:DWORD, arr:DWORD
+; Function Test
+test_stub PROC, debug:BYTE
 
-	INVOKE FiboGenerator, num, arr
-
-	ret
-a_test_FiboGenerator ENDP
-
-a_test_FindMultiple PROC, K:DWORD, N:DWORD, arr:DWORD
-
-	INVOKE FindMultiple, K, N, arr
+	call stub
+	mov eax, TRUE
 
 	ret
-a_test_FindMultiple ENDP
+test_stub ENDP
+
+test_IntCalc PROC, debug: BYTE
+
+	mov eax, 1
+	mov ebx, 2
+	mov ecx, 3
+	mov edx, 4
+	call IntCalc
+	.IF eax == -4
+		mov eax, TRUE
+	.ELSE
+		mov eax, FALSE
+	.ENDIF
+
+	ret
+test_IntCalc ENDP
 
 END

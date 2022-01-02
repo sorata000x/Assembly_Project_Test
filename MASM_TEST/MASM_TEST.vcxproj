@@ -146,16 +146,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ctestA.cpp" />
+    <ClCompile Include="ctest.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="chapter5.asm" />
-    <MASM Include="func.asm" />
     <MASM Include="testA.asm" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="chapter5.inc" />
-    <None Include="func.inc" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Assembly_Project_Test\GoogleTest\GoogleTest.vcxproj">
